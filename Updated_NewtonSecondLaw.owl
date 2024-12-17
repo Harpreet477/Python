@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/techassignment02/ontologies/2024/11/untitled-ontology-9"
+         xmlns="http://www.semanticweb.org/techassignment02/ontologies/2024/11/untitled-ontology-9#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/techassignment02/ontologies/2024/11/untitled-ontology-9"/>
+
+<owl:ObjectProperty rdf:about="#hasAcceleration">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasAcceleration"/>
+      <owl:someValuesFrom rdf:resource="#Problem"/>
+    </owl:Restriction>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasAcceleration"/>
+      <owl:someValuesFrom rdf:resource="#Acceleration"/>
+    </owl:Restriction>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCondition">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasCondition"/>
+      <owl:someValuesFrom rdf:resource="#Problem"/>
+    </owl:Restriction>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasCondition"/>
+      <owl:someValuesFrom rdf:resource="#DynamicProblem"/>
+    </owl:Restriction>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasForce">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasMass"/>
+      <owl:someValuesFrom rdf:resource="#Problem"/>
+    </owl:Restriction>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasForce"/>
+      <owl:someValuesFrom rdf:resource="#Force"/>
+    </owl:Restriction>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasMass">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasMass"/>
+      <owl:someValuesFrom rdf:resource="#Problem"/>
+    </owl:Restriction>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasMass"/>
+      <owl:someValuesFrom rdf:resource="#Mass"/>
+    </owl:Restriction>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAffectedBy">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#isAffectedBy"/>
+      <owl:someValuesFrom rdf:resource="#Problem"/>
+    </owl:Restriction>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasMass"/>
+      <owl:someValuesFrom rdf:resource="#StaticProblem"/>
+    </owl:Restriction>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#valueOfAcceleration">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasAcceleration"/>
+      <owl:someValuesFrom rdf:resource="#Acceleration"/>
+    </owl:Restriction>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#valueOfForce">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasForce"/>
+      <owl:someValuesFrom rdf:resource="#Force"/>
+    </owl:Restriction>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#valueOfMass">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasMass"/>
+      <owl:someValuesFrom rdf:resource="#Mass"/>
+    </owl:Restriction>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Acceleration">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdfs:subPropertyOf rdf:resource="#Problem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AngularAcceleration">
+  <rdfs:subClassOf rdf:resource="#Acceleration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AppliedForce">
+  <rdfs:subClassOf rdf:resource="#Force"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ConstantMass">
+  <rdfs:subClassOf rdf:resource="#Mass"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DynamicProblem">
+  <rdfs:subClassOf rdf:resource="#Problem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Force">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdfs:subPropertyOf rdf:resource="#Problem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FrictionalForce">
+  <rdfs:subClassOf rdf:resource="#Force"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GravitationalForce">
+  <rdfs:subClassOf rdf:resource="#Force"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LinearAcceleration">
+  <rdfs:subClassOf rdf:resource="#Acceleration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mass">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdfs:subPropertyOf rdf:resource="#Problem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Problem">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:Class>
+
+<owl:Class rdf:about="#StaticProblem">
+  <rdfs:subClassOf rdf:resource="#Problem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VariableMass">
+  <rdfs:subClassOf rdf:resource="#Mass"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Force20N">
+  <valueOfForce rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</valueOfForce>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mass10kg">
+  <valueOfMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</valueOfMass>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Acceleration2m/s²">
+  <valueOfAcceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</valueOfAcceleration>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

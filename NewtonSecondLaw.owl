@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/techassignment02/ontologies/2024/11/untitled-ontology-9"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/techassignment02/ontologies/2024/11/untitled-ontology-9">
+    <Prefix name="" IRI="http://www.semanticweb.org/techassignment02/ontologies/2024/11/untitled-ontology-9/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Acceleration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AngularAcceleration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AppliedForce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConstantMass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DynamicProblem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Force"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrictionalForce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GravitationalForce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LinearAcceleration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Problem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StaticProblem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VariableMass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Acceleration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Force"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Mass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Problem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAcceleration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCondition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasForce"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAffectedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#valueOfAcceleration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#valueOfForce"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#valueOfMass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Force20N"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mass10kg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Acceleration2m/s²"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AngularAcceleration"/>
+        <Class IRI="#Acceleration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AppliedForce"/>
+        <Class IRI="#Force"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConstantMass"/>
+        <Class IRI="#Mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DynamicProblem"/>
+        <Class IRI="#Problem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrictionalForce"/>
+        <Class IRI="#Force"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GravitationalForce"/>
+        <Class IRI="#Force"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LinearAcceleration"/>
+        <Class IRI="#Acceleration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StaticProblem"/>
+        <Class IRI="#Problem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VariableMass"/>
+        <Class IRI="#Mass"/>
+    </SubClassOf>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#valueOfForce"/>
+        <NamedIndividual IRI="#Force20N"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#valueOfMass"/>
+        <NamedIndividual IRI="#Mass10kg"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#valueOfAcceleration"/>
+        <NamedIndividual IRI="#Acceleration2m/s²"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Acceleration"/>
+        <ObjectProperty IRI="#Problem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Force"/>
+        <ObjectProperty IRI="#Problem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Mass"/>
+        <ObjectProperty IRI="#Problem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAcceleration"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCondition"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasForce"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMass"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAffectedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAcceleration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAcceleration"/>
+            <Class IRI="#Problem"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCondition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCondition"/>
+            <Class IRI="#Problem"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasForce"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMass"/>
+            <Class IRI="#Problem"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMass"/>
+            <Class IRI="#Problem"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAffectedBy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isAffectedBy"/>
+            <Class IRI="#Problem"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAcceleration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAcceleration"/>
+            <Class IRI="#Acceleration"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCondition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCondition"/>
+            <Class IRI="#DynamicProblem"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasForce"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasForce"/>
+            <Class IRI="#Force"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMass"/>
+            <Class IRI="#Mass"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAffectedBy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMass"/>
+            <Class IRI="#StaticProblem"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#valueOfAcceleration"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#valueOfForce"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#valueOfMass"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#valueOfAcceleration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAcceleration"/>
+            <Class IRI="#Acceleration"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#valueOfForce"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasForce"/>
+            <Class IRI="#Force"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#valueOfMass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMass"/>
+            <Class IRI="#Mass"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#valueOfAcceleration"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#valueOfForce"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#valueOfMass"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
